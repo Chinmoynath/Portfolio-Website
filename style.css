@@ -40,6 +40,7 @@ section{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    
 }
 .logo{
     font-size: 2.5rem;
@@ -55,7 +56,7 @@ section{
 }
 .navbar a:hover,
 .navbar a.active{
-    color: var(--text-color);
+    color: var(--main-color);
 }
 
 #menu-icon{
@@ -161,7 +162,7 @@ span{
     margin: 2rem 0 3rem
 }
 .certificates h2{
-    margin-bottom: 5rem;4
+    margin-bottom: 5rem;
 }
 .certificates-container{
     display: flex;
@@ -183,13 +184,13 @@ span{
     border-color: var(--main-color);
     transform: scale(1.02);
 }
-.certificates-box{
+.certificates-box i{
     font-size: 7rem;
     color: var(--main-color);
 }
 .certificates-box h3{
     font-size: 2.6rem;
-    margin: 1rem 0 3rem;
+    /* margin: 1rem 0 3rem; */
 }
 .certificates-box p{
     font-size: 1.6rem;
@@ -307,7 +308,7 @@ span{
 .footer-text{
     font-size: 1.6rem;
 }
-.footer-iconTop{
+.footer-iconTop a{
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -333,13 +334,13 @@ span{
         padding: 2rem 3%;
     }
     section{
-        padding: 10rem 1%;
+        padding: 10rem 3%;
     }
-    .services{
+    .certificates{
         padding: 7rem;
     }
-    .portfolio{
-        padding-bottom: 7rem;
+    .portfolio {
+        padding: 7rem;
     }
     .contact{
         min-height: auto;
@@ -353,6 +354,25 @@ span{
 @media(max-width: 768px){
     #menu-icon{
         display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0,0,0,0.2);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        font-size: 3rem 0;
     }
     .home{
         flex-direction: column;
@@ -384,5 +404,23 @@ span{
     }
 }
 @media(max-width: 617px){
-
+    .portfolio-container{
+        grid-template-columns: 1fr;
+    }
+    .home-img img{
+        width: 80vw;
+        margin-top: 8rem;
+    }
+    .about-img img{
+        width: 80vw;;
+        margin-top: 4rem;
+    }
+}
+@media(max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+    .contact form .input-box input{
+        width: 100%;
+    }
 }
